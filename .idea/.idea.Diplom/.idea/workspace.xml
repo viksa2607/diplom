@@ -6,14 +6,20 @@
     <projectFile profileName="https">App/App.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="" />
+    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/App/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2PdyDnn72LqCjJKWPaNzRHnxzQY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,10 +29,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\endma\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\endma\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\endma\\AppData\\Local\\Symbols\\src"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.App: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.App: https">
     <configuration name="App: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/App/App.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -82,6 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683801135955</updated>
       <workItem from="1683801136983" duration="150000" />
+      <workItem from="1683801327209" duration="463000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1683801158415</created>
@@ -90,7 +109,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683801158415</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".gitignore">
+      <created>1683801418213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683801418213</updated>
+    </task>
+    <task id="LOCAL-00003" summary="_">
+      <created>1683801434549</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683801434549</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gitignore">
+      <created>1683801556126</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683801556127</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +139,9 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value=".gitignore" />
     <MESSAGE value="_" />
-    <option name="LAST_COMMIT_MESSAGE" value="_" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>
