@@ -26,7 +26,9 @@ public class TestRepository
                 return JsonSerializer.Deserialize<List<TestResult>>(File.ReadAllText(testResultsFileName)) ?? new List<TestResult>();
             }
             
-            File.Create(testResultsFileName).Close();
+            using var fs = File.CreateText(testResultsFileName);
+            fs.Write("[]");
+            fs.Close();
             return new List<TestResult>();
             
         }
