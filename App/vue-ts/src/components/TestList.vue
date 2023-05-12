@@ -5,7 +5,7 @@ import {ref, watch} from "vue";
 import {useState} from "../../stores/state.ts";
 const state = useState();
 watch(() => state.selectedTestId, (newValue, oldValue) => {
- state.isShowTestWindow = true;
+ state.isShowTestWindow = state.selectedTestId != null;
 })
 </script>
 
@@ -17,6 +17,7 @@ watch(() => state.selectedTestId, (newValue, oldValue) => {
   <div style="display: flex; flex-direction: column;">
    <span class="item" @click="state.selectedTestId = 1">1.Test 1</span>
    <span class="item" @click="state.selectedTestId = 2">2.Test 2</span>
+   <span class="item" @click="state.selectedTestId = 3">3.Test 3</span>
   </div>
  </el-card>
  
