@@ -65,6 +65,8 @@ function handleClose() {
 <style scoped>
 .footer{
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 .titleClass{
     color: #ffffff;
