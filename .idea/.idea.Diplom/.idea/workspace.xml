@@ -5,8 +5,26 @@
     <projectFile profileName="http">App/App.csproj</projectFile>
     <projectFile profileName="https">App/App.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="gitignore" />
+    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="Models">
+      <change afterPath="$PROJECT_DIR$/DTO/TestCompleted.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DTO/TestResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Diplom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Diplom/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/WeatherForecastController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/TestController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/obj/App.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/App.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diplom.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Diplom.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTest.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,26 +42,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\endma\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\endma\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\endma\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\endma\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\endma\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\endma\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.App: https">
     <configuration name="App: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/App/App.csproj" />
@@ -100,7 +118,8 @@
       <option name="presentableId" value="Default" />
       <updated>1683801135955</updated>
       <workItem from="1683801136983" duration="150000" />
-      <workItem from="1683801327209" duration="463000" />
+      <workItem from="1683801327209" duration="2777000" />
+      <workItem from="1683881416630" duration="1914000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1683801158415</created>
@@ -130,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683801556127</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Models">
+      <created>1683802899431</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683802899431</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +168,7 @@
     <MESSAGE value=".gitignore" />
     <MESSAGE value="_" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Models" />
   </component>
 </project>

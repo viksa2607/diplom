@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Models.Interfaces;
 
 namespace Models;
@@ -17,6 +18,7 @@ public class DTest : IHasId
 /// </summary>
 public class DTestQuestion : IHasId
 {
+    [JsonIgnore]
     public string Answer { get; set; }
     public List<string> Variants { get; set; }
     public bool IsCorrectAnswer(string clientAnswer) => Answer == clientAnswer;
