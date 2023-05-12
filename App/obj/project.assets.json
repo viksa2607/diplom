@@ -184,6 +184,20 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DTO": "1.0.0",
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
       "DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -664,6 +678,11 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
     "DTO/1.0.0": {
       "type": "project",
       "path": "../DTO/DTO.csproj",
@@ -682,6 +701,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "DAL >= 1.0.0",
       "DTO >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.4",
       "Models >= 1.0.0",
@@ -716,6 +736,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "D:\\Code\\new_Git\\diplom\\DAL\\DAL.csproj": {
+              "projectPath": "D:\\Code\\new_Git\\diplom\\DAL\\DAL.csproj"
+            },
             "D:\\Code\\new_Git\\diplom\\DTO\\DTO.csproj": {
               "projectPath": "D:\\Code\\new_Git\\diplom\\DTO\\DTO.csproj"
             },

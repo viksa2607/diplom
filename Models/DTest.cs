@@ -19,7 +19,6 @@ public class DTest : IHasId
 public class DTestQuestion : IHasId
 {
     public string Question { get; set; }
-    [JsonIgnore]
     public string CorrectAnswer { get; set; }
     public List<string> Variants { get; set; }
     public bool IsCorrectAnswer(string clientAnswer) => CorrectAnswer == clientAnswer;

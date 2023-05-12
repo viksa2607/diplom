@@ -1,4 +1,5 @@
 using System.Text.Json;
+using DAL;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 using Models;
@@ -9,76 +10,21 @@ namespace App.Controllers;
 [Route("[controller]/[action]")]
 public class TestController : ControllerBase
 {
-    private List<DTest> _db = new List<DTest>()
-    {
-        new DTest()
-        {
-            Id = 1,
-            Name = "Test 1",
-            Questions = new List<DTestQuestion>()
-            {
-                new DTestQuestion()
-                {
-                    Id = 1,
-                    Question = "asd?",
-                    Variants = new List<string>()
-                    {
-                        "asd",
-                        "qwe",
-                        "qqq",
-                        "ccc",
-                        "aaa",
-                        "ddd",
-                    },
-                    CorrectAnswer = "asd"
-                },
-                new DTestQuestion()
-                {
-                    Id = 2,
-                    Question = "ccc?",
-                    Variants = new List<string>()
-                    {
-                        "as",
-                        "asd",
-                        "ccc"
-                    },
-                    CorrectAnswer = "ccc"
-                }
-            }
-        },
-        new DTest()
-        {
-            Id = 2,
-            Name = "Test hueta",
-            Questions = new List<DTestQuestion>()
-            {
-                new DTestQuestion()
-                {
-                    Id = 1,
-                    Question = "hueta?",
-                    Variants = new List<string>()
-                    {
-                        "ДА",
-                        "НЕТ",
-                    },
-                    CorrectAnswer = "ДА"
-                }
-            }
-        }
-    };
+    private readonly TestRepository _testRepository;
 
-    private static List<TestResult> _dbTestResults = new List<TestResult>();
+    private List<DTest> _dTests;
     private readonly ILogger<TestController> _logger;
-
-    public TestController(ILogger<TestController> logger)
+    public TestController(ILogger<TestController> logger, TestRepository testRepository)
     {
         _logger = logger;
+        _testRepository = testRepository;
+        _dTests = _testRepository.List();
     }
 
     [HttpGet]
     public IActionResult GetTestList()
     {
-        return Ok(JsonSerializer.Serialize(_db.Select(i => new
+        return Ok(JsonSerializer.Serialize(_dTests.Select(i => new
         {
             Id = i.Id,
             Name = i.Name
@@ -88,13 +34,13 @@ public class TestController : ControllerBase
     [HttpGet]
     public DTest? GetTest([FromQuery]int testId)
     {
-        return _db.FirstOrDefault(i => i.Id == testId);
+        return _dTests.FirstOrDefault(i => i.Id == testId);
     }
 
     [HttpPost]
     public TestResult? Validate([FromBody] TestCompleted testCompleted)
     {
-        var dTest = _db.FirstOrDefault(i => i.Id == testCompleted.TestId);
+        var dTest = _dTests.FirstOrDefault(i => i.Id == testCompleted.TestId);
         if (dTest is null)
             return null;
         var answers = dTest.Questions.Select(i => i.IsCorrectAnswer(testCompleted.Answers.FirstOrDefault(a => i.Id == a.Id)?.Answer ?? string.Empty)) ;
@@ -105,13 +51,13 @@ public class TestController : ControllerBase
             UserName = testCompleted.UserName,
             TestName = dTest.Name
         };
-        _dbTestResults.Add(result);
+        _testRepository.AddResult(result);
         return result;
     }
 
     [HttpGet]
     public List<TestResult> GetLastResults()
     {
-        return _dbTestResults;
+        return _testRepository.Results();
     }
 }

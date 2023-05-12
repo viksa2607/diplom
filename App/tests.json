@@ -1,0 +1,46 @@
+[
+  {
+    "Name": "Test 1",
+    "Questions": [
+      {
+        "CorrectAnswer": "asd",
+        "Question": "asd?",
+        "Variants": [
+          "asd",
+          "qwe",
+          "qqq",
+          "ccc",
+          "aaa",
+          "ddd"
+        ],
+        "Id": 1
+      },
+      {
+        "Question": "ccc?",
+        "CorrectAnswer": "ccc",
+        "Variants": [
+          "as",
+          "asd",
+          "ccc"
+        ],
+        "Id": 2
+      }
+    ],
+    "Id": 1
+  },
+  {
+    "Name": "Test hueta",
+    "Questions": [
+      {
+        "CorrectAnswer": "ДА",
+        "Question": "hueta?",
+        "Variants": [
+          "ДА",
+          "НЕТ"
+        ],
+        "Id": 1
+      }
+    ],
+    "Id": 2
+  }
+]

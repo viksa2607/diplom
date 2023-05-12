@@ -1,5 +1,4 @@
-// using UI;
-
+using DAL;
 using UI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.InjectFrontendServices();
+
+builder.Services.AddSingleton<TestRepository>();
 
 var app = builder.Build();
 
@@ -29,4 +30,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run("https://*:2607");

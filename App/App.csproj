@@ -19,8 +19,18 @@
     </PropertyGroup>
     
     <ItemGroup>
+      <ProjectReference Include="..\DAL\DAL.csproj" />
       <ProjectReference Include="..\DTO\DTO.csproj" />
       <ProjectReference Include="..\Models\Models.csproj" />
       <ProjectReference Include="..\UI\UI.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <None Update="tests.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="results.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 </Project>

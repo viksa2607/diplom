@@ -10,28 +10,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="Move UI to new project">
-      <change afterPath="$PROJECT_DIR$/App/publish.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/publishf.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/Launcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/StartupExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/build.bat" afterDir="false" />
+    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="Vue UI in .Net Project + batch scripts for publish">
+      <change afterPath="$PROJECT_DIR$/DAL/TestRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Diplom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Diplom/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/TestController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/appsettings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/App/obj/App.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/App.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/obj/App.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/App.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/UI/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/publishf.bat" beforeDir="false" afterPath="$PROJECT_DIR$/App/publishf.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Diplom.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Diplom.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +40,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/App/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/141bcb0ad6974940940167053c21cf35188b0/19/cd116195/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/141bcb0ad6974940940167053c21cf35188b0/af/a7431566/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2048d5b61a78bef52894eecf448e34a883cb22e1abb6711e0eb6d690a3b0/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/621526284d3e4868b98948aff942206525763e57e194a27623b66c384466/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b64452b1c2944ed3799d830ba18a2df1a3b8e39d12ef88245b77bcb0421714/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e6641ef64e23bc021c22f7a836547714731db956d18c439bc734695b9e72/SafeFileHandle.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f29badfa44c3fe9a899a344d82ba1816139119ffc8614dc5e34e0d816e7a4/RunExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -173,7 +173,7 @@
       <workItem from="1683801136983" duration="150000" />
       <workItem from="1683801327209" duration="2777000" />
       <workItem from="1683881416630" duration="20819000" />
-      <workItem from="1683902939249" duration="8787000" />
+      <workItem from="1683902939249" duration="12144000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1683801158415</created>
@@ -273,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683922066108</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Vue UI in .Net Project + batch scripts for publish">
+      <created>1683927378389</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683927378389</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +312,8 @@
     <MESSAGE value="ResultsTable" />
     <MESSAGE value="__" />
     <MESSAGE value="Move UI to new project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move UI to new project" />
+    <MESSAGE value="Vue UI in .Net Project + batch scripts for publish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vue UI in .Net Project + batch scripts for publish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -315,10 +323,10 @@
           <line>40</line>
           <properties documentPath="D:\Code\new_Git\diplom\UI\StartupExtensions.cs" initialLine="36" containingFunctionPresentation="Method 'UseFrontendStaticFiles'">
             <startOffsets>
-              <option value="1426" />
+              <option value="1431" />
             </startOffsets>
             <endOffsets>
-              <option value="1427" />
+              <option value="1432" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
