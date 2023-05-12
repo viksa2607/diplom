@@ -9,20 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="answeredQuestions highlight">
-      <change afterPath="$PROJECT_DIR$/App/vue-ts/src/components/TestResult.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/vue-ts/src/components/TestResults.vue" afterDir="false" />
+    <list default="true" id="255a5fb6-e929-4e74-83a1-e4ae1eaf0f20" name="Changes" comment="ResultsTable">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Diplom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Diplom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controllers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/TestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/App/obj/Debug/net7.0/App.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/src/components/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/src/components/Question.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/src/components/Test.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/src/components/Test.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/src/components/TestList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/src/components/TestList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/stores/backend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/stores/backend.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/vue-ts/stores/state.ts" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/stores/state.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO/TestResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/TestResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/vue-ts/src/components/TestResult.vue" beforeDir="false" afterPath="$PROJECT_DIR$/App/vue-ts/src/components/TestResult.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +63,11 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.App: https">
+  <component name="RunManager" selected="Publish to folder.Publish">
+    <configuration name="Publish" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" delete_existing_files="true" include_native_libs_for_self_extract="true" platform="Any CPU" produce_single_file="true" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/App/bin/Release/net7.0/win-x64/publish" target_framework="net7.0" uuid_high="-574380293489079981" uuid_low="-6979785736316962502" />
+      <method v="2" />
+    </configuration>
     <configuration name="App: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/App/App.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -120,6 +113,12 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.App: http" />
+      <item itemvalue=".NET Launch Settings Profile.App: https" />
+      <item itemvalue=".NET Launch Settings Profile.App: IIS Express" />
+      <item itemvalue="Publish to folder.Publish" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -131,7 +130,7 @@
       <updated>1683801135955</updated>
       <workItem from="1683801136983" duration="150000" />
       <workItem from="1683801327209" duration="2777000" />
-      <workItem from="1683881416630" duration="18318000" />
+      <workItem from="1683881416630" duration="20819000" />
     </task>
     <task id="LOCAL-00001" summary="_">
       <created>1683801158415</created>
@@ -210,13 +209,31 @@
       <option name="project" value="LOCAL" />
       <updated>1683894569102</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ResultsTable">
+      <created>1683901672962</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683901672962</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value=".gitignore" />
@@ -229,6 +246,7 @@
     <MESSAGE value="UserName" />
     <MESSAGE value="Cors fix + fill TestList from server &amp; getTestByID" />
     <MESSAGE value="answeredQuestions highlight" />
-    <option name="LAST_COMMIT_MESSAGE" value="answeredQuestions highlight" />
+    <MESSAGE value="ResultsTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="ResultsTable" />
   </component>
 </project>

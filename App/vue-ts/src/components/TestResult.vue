@@ -12,7 +12,7 @@ const state = useState()
            :title="'Тест '+backend.currentTest.name + (backend.lastValidateResult?.succeed==true?' пройден':' не пройден')"
 >
     <div class="content">
-        <div>Имя пользователя: {{state.testState?.userName}}</div>
+        <div>Имя пользователя: {{backend.lastValidateResult?.userName}}</div>
         <div>Всего вопросов: {{backend.lastValidateResult?.totalQuestions}}</div>
         <div>Правильно отвечено: {{backend.lastValidateResult?.correctAnswerCount}}</div>
         <div>Тест пройден на {{backend.lastValidateResult?.percent * 100}}%</div>
