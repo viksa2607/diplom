@@ -4,9 +4,9 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <PublishSingleFile>true</PublishSingleFile>
-        <SelfContained>true</SelfContained>
-        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+<!--        <PublishSingleFile>true</PublishSingleFile>-->
+<!--        <SelfContained>true</SelfContained>-->
+<!--        <RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,9 +14,13 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <BlazorWebAssemblyOmitDebugProxyOutput>true</BlazorWebAssemblyOmitDebugProxyOutput>
+    </PropertyGroup>
+    
     <ItemGroup>
       <ProjectReference Include="..\DTO\DTO.csproj" />
       <ProjectReference Include="..\Models\Models.csproj" />
+      <ProjectReference Include="..\UI\UI.csproj" />
     </ItemGroup>
-
 </Project>
