@@ -1,3 +1,4 @@
+using System.Text.Json;
 using DTO;
 using Microsoft.AspNetCore.Mvc;
 using Models;
@@ -5,7 +6,7 @@ using Models;
 namespace App.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("[controller]/[action]")]
 public class TestController : ControllerBase
 {
     
@@ -21,24 +22,29 @@ public class TestController : ControllerBase
                 new DTestQuestion()
                 {
                     Id = 1,
+                    Question = "asd?",
                     Variants = new List<string>()
                     {
                         "asd",
                         "qwe",
-                        "qqq"
+                        "qqq",
+                        "ccc",
+                        "aaa",
+                        "ddd",
                     },
-                    Answer = "asd"
+                    CorrectAnswer = "asd"
                 },
                 new DTestQuestion()
                 {
                     Id = 2,
+                    Question = "ccc?",
                     Variants = new List<string>()
                     {
                         "as",
                         "asd",
                         "ccc"
                     },
-                    Answer = "ccc"
+                    CorrectAnswer = "ccc"
                 }
             }
         }
@@ -50,16 +56,28 @@ public class TestController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetTest")]
-    public DTest? Get([FromQuery]int testId)
+    [HttpGet]
+    public IActionResult GetTestList()
+    {
+        return Ok(JsonSerializer.Serialize(_db.Select(i => new
+        {
+            Id = i.Id,
+            Name = i.Name
+        })));
+    }
+    
+    [HttpGet]
+    public DTest? GetTest([FromQuery]int testId)
     {
         return _db.FirstOrDefault(i => i.Id == testId);
     }
 
-    [HttpPost(Name = "PostValidateTest")]
-    public TestResult Validate([FromBody] TestCompleted testCompleted)
+    [HttpPost]
+    public TestResult? Validate([FromBody] TestCompleted testCompleted)
     {
         var dTest = _db.FirstOrDefault(i => i.Id == testCompleted.TestId);
+        if (dTest is null)
+            return null;
         var answers = dTest.Questions.Select(i => i.IsCorrectAnswer(testCompleted.Answers.FirstOrDefault(a => i.Id == a.Id)?.Answer ?? string.Empty)) ;
         return new TestResult()
         {

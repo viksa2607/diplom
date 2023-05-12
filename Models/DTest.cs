@@ -18,9 +18,10 @@ public class DTest : IHasId
 /// </summary>
 public class DTestQuestion : IHasId
 {
+    public string Question { get; set; }
     [JsonIgnore]
-    public string Answer { get; set; }
+    public string CorrectAnswer { get; set; }
     public List<string> Variants { get; set; }
-    public bool IsCorrectAnswer(string clientAnswer) => Answer == clientAnswer;
+    public bool IsCorrectAnswer(string clientAnswer) => CorrectAnswer == clientAnswer;
     public int Id { get; set; }
 }

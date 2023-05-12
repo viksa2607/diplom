@@ -20,7 +20,7 @@ public class UnitTest1
                         "qwe",
                         "qqq"
                     },
-                    Answer = "asd"
+                    CorrectAnswer = "asd"
                 },
                 new DTestQuestion()
                 {
@@ -30,7 +30,7 @@ public class UnitTest1
                         "asd",
                         "ccc"
                     },
-                    Answer = "ccc"
+                    CorrectAnswer = "ccc"
                 }
             }
         };

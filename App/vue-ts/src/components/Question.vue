@@ -1,14 +1,15 @@
 <script setup lang="ts">
  import {ref} from "vue";
 
- const answer = ref("")
+ const props = defineProps(['value'])
+ const answer = ref(null as string)
 </script>
 
 <template>
-  <el-card style="width: 80vw; display: flex; margin-top: 5px">
+  <el-card style="width: 100%; display: flex; margin-top: 5px">
       <template #header>
           <div style="font-size: 1rem">
-              <span>Текст вопроса</span>
+              <span>{{props.value?.question}}</span>
           </div>
           <div>
           <el-radio-group
@@ -16,11 +17,8 @@
                   style="display: flex; flex-direction: column; justify-content: flex-start"
                   type="vertical"
           >
-              <el-row>
-                  <el-radio label="1" size="large">Ответ 1</el-radio>
-              </el-row>
-              <el-row>
-                  <el-radio label="2" size="large">Ответ 2</el-radio>
+              <el-row v-for="variant in props.value?.variants">
+                  <el-radio :label="variant" size="large">{{ variant }}</el-radio>
               </el-row>
           </el-radio-group>
           </div>

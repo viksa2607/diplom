@@ -1,12 +1,17 @@
 <script setup lang="ts">
 
-import Test from "./Test.vue";
 import {ref, watch} from "vue";
 import {useState} from "../../stores/state.ts";
+import {useBackend} from "../../stores/backend.ts";
 const state = useState();
-watch(() => state.selectedTestId, (newValue, oldValue) => {
+watch(() => state.selectedTestId, async (newValue, oldValue) => {
  state.isShowTestWindow = state.selectedTestId != null;
+ if (state.selectedTestId != null) {
+  await backend.getTest(state.selectedTestId);
+ }
 })
+const backend = useBackend()
+backend.updateTestList()
 </script>
 
 <template>
@@ -15,9 +20,9 @@ watch(() => state.selectedTestId, (newValue, oldValue) => {
    <span>Список тестов</span>
   </div>
   <div style="display: flex; flex-direction: column;">
-   <span class="item" @click="state.selectedTestId = 1">1.Test 1</span>
-   <span class="item" @click="state.selectedTestId = 2">2.Test 2</span>
-   <span class="item" @click="state.selectedTestId = 3">3.Test 3</span>
+   <span class="item" 
+         @click="state.selectedTestId = testItem.Id" 
+         v-for="testItem in backend.testList">{{testItem.Name}}</span>
   </div>
  </el-card>
  

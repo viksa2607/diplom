@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import {onMounted, ref, watch} from "vue";
+import {onMounted, onUpdated, ref, watch} from "vue";
 import Question from "./Question.vue";
 import {useState} from "../../stores/state.ts";
 import {ElMessage, ElMessageBox} from "element-plus";
+import {useBackend} from "../../stores/backend.ts";
 
 const state = useState()
 
 const headerContent = ref(null);
 const userName = ref(null as string);
+const backend = useBackend();
+
+
 onMounted(() => {
     (headerContent.value as any).parentNode.style.marginBottom = '5px' //изменение marginBottom DrawerHeader
 })
@@ -17,7 +21,8 @@ function sendTestResult() {
         ElMessage.error('Укажите имя пользователя')
         return;
     }
-
+    
+    state.selectedTestId = null as number;
     ElMessage.success('Результат отправлен')
 }
 function handleClose() {
@@ -33,7 +38,7 @@ function handleClose() {
 </script>
 
 <template>
-    <el-drawer size="100%" 
+    <el-drawer size="60%" 
                style="background-color: #747bff" 
                v-model="state.isShowTestWindow"
                :title="state.selectedTestId as string"
@@ -41,24 +46,17 @@ function handleClose() {
     >
         <template #header="{ close, titleId, titleClass }">
             <div ref="headerContent" style="display: flex; justify-content: space-between">
-                <h4 :id="titleId" class="titleClass">TestId: {{state.selectedTestId}}</h4>
+                <h4 :id="titleId" class="titleClass">{{backend.currentTest?.name}}</h4>
             </div>
             <div>
                 <el-input v-model="userName" placeholder="Имя пользователя"></el-input>
             </div>
         </template>
         <div class="content">
-            <Question></Question>
-            <Question></Question>
-            <Question></Question>
-            <Question></Question>
-            <Question></Question>
-            <Question></Question>
-            <Question></Question>
-            <Question></Question>
+            <Question :value="question" v-for="question in backend.currentTest?.questions"></Question>
         </div>
         <div class="footer">
-            <el-button @click="sendTestResult">Отправить результат</el-button>
+            <el-button @click="sendTestResult" size="large">Отправить результат</el-button>
         </div>
         
     </el-drawer>
