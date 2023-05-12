@@ -9,8 +9,6 @@ namespace App.Controllers;
 [Route("[controller]/[action]")]
 public class TestController : ControllerBase
 {
-    
-
     private List<DTest> _db = new List<DTest>()
     {
         new DTest()
@@ -47,8 +45,29 @@ public class TestController : ControllerBase
                     CorrectAnswer = "ccc"
                 }
             }
+        },
+        new DTest()
+        {
+            Id = 2,
+            Name = "Test hueta",
+            Questions = new List<DTestQuestion>()
+            {
+                new DTestQuestion()
+                {
+                    Id = 1,
+                    Question = "hueta?",
+                    Variants = new List<string>()
+                    {
+                        "ДА",
+                        "НЕТ",
+                    },
+                    CorrectAnswer = "ДА"
+                }
+            }
         }
     };
+
+    private static List<TestResult> _dbTestResults = new List<TestResult>();
     private readonly ILogger<TestController> _logger;
 
     public TestController(ILogger<TestController> logger)
@@ -79,10 +98,20 @@ public class TestController : ControllerBase
         if (dTest is null)
             return null;
         var answers = dTest.Questions.Select(i => i.IsCorrectAnswer(testCompleted.Answers.FirstOrDefault(a => i.Id == a.Id)?.Answer ?? string.Empty)) ;
-        return new TestResult()
+        var result = new TestResult()
         {
             TotalQuestions = dTest.Questions.Count,
             CorrectAnswerCount = answers.Count(i => i),
+            UserName = testCompleted.UserName,
+            TestName = dTest.Name
         };
+        _dbTestResults.Add(result);
+        return result;
+    }
+
+    [HttpGet]
+    public List<TestResult> GetLastResults()
+    {
+        return _dbTestResults;
     }
 }

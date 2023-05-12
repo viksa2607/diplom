@@ -8,6 +8,11 @@ watch(() => state.selectedTestId, async (newValue, oldValue) => {
  state.isShowTestWindow = state.selectedTestId != null;
  if (state.selectedTestId != null) {
   await backend.getTest(state.selectedTestId);
+  state.testState = {
+   answers: [],
+   testId: state.selectedTestId,
+   userName: null as string
+  }
  }
 })
 const backend = useBackend()
