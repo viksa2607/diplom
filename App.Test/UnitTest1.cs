@@ -14,6 +14,7 @@ public class UnitTest1
             {
                 new DTestQuestion()
                 {
+                    Id=1,
                     Variants = new List<string>()
                     {
                         "asd",
@@ -23,7 +24,9 @@ public class UnitTest1
                     CorrectAnswer = "asd"
                 },
                 new DTestQuestion()
+               
                 {
+                    Id=2,
                     Variants = new List<string>()
                     {
                         "as",
@@ -42,5 +45,15 @@ public class UnitTest1
         };
         var isCorrectAnswer = 
             test.Questions.FirstOrDefault(i => i.Id == testQuestionAnswer.Id)?.IsCorrectAnswer(testQuestionAnswer.Answer) ?? false;
+        
+        Assert.True(isCorrectAnswer);
+        var testQuestionAnswerFalse = new
+        {
+            Id = 1,
+            Answer = "qqq"
+        };
+        var isInCorrectAnswer = 
+            test.Questions.FirstOrDefault(i => i.Id == testQuestionAnswerFalse.Id)?.IsCorrectAnswer(testQuestionAnswerFalse.Answer) ?? false;
+        Assert.False(isInCorrectAnswer);
     }
 }
