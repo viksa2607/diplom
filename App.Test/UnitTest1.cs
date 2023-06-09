@@ -5,7 +5,7 @@ namespace App.Test;
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
+    public void TestValidateAnswer()
     {
         var test = new DTest()
         {
